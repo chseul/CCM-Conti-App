@@ -1,0 +1,14 @@
+{
+	"appId": "com.core.app",
+	"appName": "ccm-conti",
+	"webDir": "my-app/dist",
+	"bundledWebRuntime": false,
+	"server": {
+		"url": "https://cch2308.cafe24.com",
+		"cleartext": true
+	},
+    "ios": {
+          "contentInset": "always"
+        },
+	"packageClassList": []
+}
