@@ -3,6 +3,9 @@ import Capacitor
 import WebKit
 
 class ViewController: CAPBridgeViewController, UIGestureRecognizerDelegate {
+    
+    var scrollToTopButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +34,8 @@ class ViewController: CAPBridgeViewController, UIGestureRecognizerDelegate {
         webView.scrollView.bouncesZoom = true
         webView.scrollView.isScrollEnabled = true
         webView.scrollView.isUserInteractionEnabled = true
+        
+        setupScrollToTopButton()
     }
 
     @objc func handleSwipe(_ gesture: UIScreenEdgePanGestureRecognizer) {
@@ -40,4 +45,32 @@ class ViewController: CAPBridgeViewController, UIGestureRecognizerDelegate {
             }
         }
     }
+    func setupScrollToTopButton() {
+            scrollToTopButton = UIButton(type: .system)
+            scrollToTopButton.setTitle("↑", for: .normal)
+            scrollToTopButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+            scrollToTopButton.backgroundColor = UIColor.systemIndigo
+            scrollToTopButton.setTitleColor(.white, for: .normal)
+            scrollToTopButton.layer.cornerRadius = 10
+            scrollToTopButton.clipsToBounds = true
+            scrollToTopButton.translatesAutoresizingMaskIntoConstraints = false
+            scrollToTopButton.addTarget(self, action: #selector(scrollToTopTapped), for: .touchUpInside)
+
+            view.addSubview(scrollToTopButton)
+
+            NSLayoutConstraint.activate([
+                scrollToTopButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+                scrollToTopButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60),
+                scrollToTopButton.widthAnchor.constraint(equalToConstant: 40),
+                scrollToTopButton.heightAnchor.constraint(equalToConstant: 40)
+            ])
+        }
+
+        @objc func scrollToTopTapped() {
+            if let webView = self.bridge?.webView as? WKWebView {
+                let js = "window.scrollTo({ top: 0, behavior: 'smooth' });"
+                webView.evaluateJavaScript(js, completionHandler: nil)
+            }
+        }
+    
 }
