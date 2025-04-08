@@ -17,6 +17,7 @@
 		D120384A2D9B83A100F153B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12038492D9B839700F153B6 /* ViewController.swift */; };
 		D12038522D9E0F2F00F153B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12038512D9E0F2F00F153B6 /* Main.storyboard */; };
 		D12038582D9E649E00F153B6 /* EchoPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12038572D9E649E00F153B6 /* EchoPlugin.swift */; };
+		D13FD0892DA4AAF800210587 /* capacitor.config.json_copy in Resources */ = {isa = PBXBuildFile; fileRef = D13FD0882DA4AAE400210587 /* capacitor.config.json_copy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D12038492D9B839700F153B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D12038512D9E0F2F00F153B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D12038572D9E649E00F153B6 /* EchoPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoPlugin.swift; sourceTree = "<group>"; };
+		D13FD0882DA4AAE400210587 /* capacitor.config.json_copy */ = {isa = PBXFileReference; lastKnownFileType = text; path = capacitor.config.json_copy; sourceTree = "<group>"; };
 		FC68EB0AF532CFC21C3344DD /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 			children = (
 				D12038492D9B839700F153B6 /* ViewController.swift */,
 				50379B222058CBB4000EE86E /* capacitor.config.json */,
+				D13FD0882DA4AAE400210587 /* capacitor.config.json_copy */,
 				504EC3071FED79650016851F /* AppDelegate.swift */,
 				504EC30E1FED79650016851F /* Assets.xcassets */,
 				504EC3101FED79650016851F /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 				50B271D11FEDC1A000F3C39B /* public in Resources */,
 				504EC30F1FED79650016851F /* Assets.xcassets in Resources */,
 				D12038522D9E0F2F00F153B6 /* Main.storyboard in Resources */,
+				D13FD0892DA4AAF800210587 /* capacitor.config.json_copy in Resources */,
 				50379B232058CBB4000EE86E /* capacitor.config.json in Resources */,
 				2FAD9763203C412B000D30F8 /* config.xml in Resources */,
 			);
